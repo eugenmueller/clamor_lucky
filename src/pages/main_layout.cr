@@ -23,15 +23,10 @@ abstract class MainLayout
     "Welcome"
   end
 
-  def navbar_brand
-    
-  end
-
   def render
     html_doctype
 
     html lang: "en" do
-      
       mount Shared::LayoutHead, page_title: page_title, context: context
 
       body do

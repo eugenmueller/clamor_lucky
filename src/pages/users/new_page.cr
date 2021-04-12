@@ -4,7 +4,7 @@ class Users::NewPage < MainLayout
 
     button "Click to toggle popover", class: "btn btn-lg btn-danger", data_bs_content: "And here's some amazing content. It's very engaging. Right?", data_bs_toggle: "popover", title: "Popover title", type: "button"
     br
-    
+
     button class: "btn btn-primary", data_bs_target: "#exampleModal", data_bs_toggle: "modal", type: "button" do
       text " Launch demo modal "
     end
@@ -25,6 +25,5 @@ class Users::NewPage < MainLayout
         end
       end
     end
-
   end
 end

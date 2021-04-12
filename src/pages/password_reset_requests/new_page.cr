@@ -15,7 +15,7 @@ class PasswordResetRequests::NewPage < AuthLayout
         end
       end
       div class: "col"
-    end    
+    end
   end
 
   private def render_form(op)

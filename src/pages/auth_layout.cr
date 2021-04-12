@@ -22,7 +22,7 @@ abstract class AuthLayout
         mount Shared::Navigation, context: context
         div class: "container-fluid" do
           mount Shared::FlashMessages, context.flash
-        content
+          content
         end
       end
     end
