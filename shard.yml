@@ -1,0 +1,31 @@
+name: clamor_full_app
+version: 0.1.0
+
+authors:
+  - Eugen Müller <eugen.mllr@gmail.com>
+
+targets:
+  clamor_full_app:
+    main: src/clamor_full_app.cr
+
+crystal: 0.36.1
+
+dependencies:
+  lucky:
+    github: luckyframework/lucky
+    version: ~> 0.26.0
+  authentic:
+    github: luckyframework/authentic
+    version: ~> 0.7.2
+  carbon:
+    github: luckyframework/carbon
+    version: ~> 0.1.2
+  dotenv:
+    github: gdotdesign/cr-dotenv
+    version: ~> 0.7.0
+  lucky_flow:
+    github: luckyframework/lucky_flow
+    version: ~> 0.7.2
+  jwt:
+    github: crystal-community/jwt
+    version: ~> 1.5.0
