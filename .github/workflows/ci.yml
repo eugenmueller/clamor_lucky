@@ -94,6 +94,7 @@ jobs:
     - name: Install yarn packages
       if: steps.node-cache.outputs.cache-hit != 'true'
       run: yarn install --frozen-lockfile --no-progress
+
     - name: Compiling assets
       run: yarn prod
 
@@ -103,9 +104,9 @@ jobs:
 
     - name: Prepare database
       run: |
-        ./lucky_tasks db.create
-        ./lucky_tasks db.migrate
-        ./lucky_tasks db.seed.required_data
+        lucky db.create
+        lucky db.migrate
+        lucky db.seed.required_data
 
     - name: Run tests
       run: crystal spec
