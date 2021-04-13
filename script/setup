@@ -12,7 +12,7 @@ notice "Running System Check"
 print_done
 
 notice "Installing node dependencies"
-yarn install --no-progress | indent
+yarn install | indent
 
 notice "Compiling assets"
 yarn dev | indent
@@ -20,7 +20,7 @@ yarn dev | indent
 print_done
 
 notice "Installing shards"
-shards install --ignore-crystal-version | indent
+shards install | indent
 
 if [ ! -f ".env" ]; then
   notice "No .env found. Creating one."
@@ -38,7 +38,7 @@ notice "Migrating the database"
 lucky db.migrate | indent
 
 notice "Seeding the database with required and sample records"
-lucky db.seed.required_data | indent
+# lucky db.seed.required_data | indent
 lucky db.seed.sample_data | indent
 
 print_done
