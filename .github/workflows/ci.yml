@@ -23,7 +23,6 @@ jobs:
     env:
       LUCKY_ENV: test
       DB_HOST: postgres
-      DB_PORT: "5432"
 
     services:
       postgres:
@@ -31,7 +30,7 @@ jobs:
         env:
           POSTGRES_PASSWORD: postgres
         ports:
-          - 5432:5432
+          - 5433:5433
        # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
