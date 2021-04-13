@@ -1,4 +1,4 @@
-# clamor_full_app
+# clamor_lucky
 
 This is a project written using [Lucky](https://luckyframework.org). Enjoy!
 

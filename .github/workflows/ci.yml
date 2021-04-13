@@ -1,4 +1,4 @@
-name: clamor_full_app CI
+name: clamor_lucky CI
 
 on:
   push:

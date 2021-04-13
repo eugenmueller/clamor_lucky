@@ -10,6 +10,7 @@ class Db::Seed::RequiredData < LuckyCli::Task
   summary "Add database records required for the app to work"
 
   def call
+    UserFactory.create &.email("eugen.mllr@gmail.com").admin(true)
     # Using a Avram::Factory:
     #
     # Use the defaults, but override just the email

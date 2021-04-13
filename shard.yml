@@ -1,12 +1,12 @@
-name: clamor_full_app
+name: clamor_lucky
 version: 0.1.0
 
 authors:
   - Eugen Müller <eugen.mllr@gmail.com>
 
 targets:
-  clamor_full_app:
-    main: src/clamor_full_app.cr
+  clamor_lucky:
+    main: src/clamor_lucky.cr
 
 crystal: 0.36.1
 

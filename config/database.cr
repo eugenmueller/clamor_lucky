@@ -1,4 +1,4 @@
-database_name = "clamor_full_app_#{Lucky::Env.name}"
+database_name = "clamor_lucky_#{Lucky::Env.name}"
 
 AppDatabase.configure do |settings|
   if Lucky::Env.production?

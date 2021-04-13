@@ -1,7 +1,7 @@
 require "./server"
 
 Lucky::Session.configure do |settings|
-  settings.key = "_clamor_full_app_session"
+  settings.key = "_clamor_lucky_session"
 end
 
 Lucky::CookieJar.configure do |settings|

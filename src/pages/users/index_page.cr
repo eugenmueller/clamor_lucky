@@ -21,6 +21,8 @@ class Users::IndexPage < MainLayout
           link user.id, to: Users::Show.with(user.id)
           text "-"
           text user.email || "No Email"
+          text "-"
+          text user.admin
           # text user.created_at || "No Nickname"
         end
       end

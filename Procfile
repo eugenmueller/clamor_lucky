@@ -1,2 +1,2 @@
-web: bin/clamor_full_app
+web: bin/clamor_lucky
 release: lucky db.migrate
