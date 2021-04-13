@@ -23,6 +23,7 @@ jobs:
     env:
       LUCKY_ENV: test
       DB_HOST: postgres
+      DB_PORT: 5432
 
     services:
       postgres:
