@@ -89,7 +89,7 @@ jobs:
 
     - name: Install shards
       if: steps.crystal-cache.outputs.cache-hit != 'true'
-      run: shards check || shards install
+      run: shards check || shards install || shard build
 
     - name: Install yarn packages
       if: steps.node-cache.outputs.cache-hit != 'true'

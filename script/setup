@@ -22,6 +22,9 @@ print_done
 notice "Installing shards"
 shards install | indent
 
+notice "Build shards"
+shards build | indent
+
 if [ ! -f ".env" ]; then
   notice "No .env found. Creating one."
   touch .env
