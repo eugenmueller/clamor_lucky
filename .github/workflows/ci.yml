@@ -23,12 +23,13 @@ jobs:
     env:
       LUCKY_ENV: test
       DB_HOST: postgres
+      DB_PASSWORD: postgres
 
     services:
       postgres:
         image: postgres:12-alpine
         env:
-          POSTGRES_PASSWORD: 
+          POSTGRES_PASSWORD: postgres
         ports:
           - 5432:5432
        # Set health checks to wait until postgres has started
