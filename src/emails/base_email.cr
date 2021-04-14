@@ -12,6 +12,10 @@ abstract class BaseEmail < Carbon::Email
   #   def default_from
   #     Carbon::Address.new("support@app.com")
   #   end
+  macro inherited
+    from default_from
+  end
+  
   def default_from
     Carbon::Address.new("clamorapp.info@gmail.com")
   end
