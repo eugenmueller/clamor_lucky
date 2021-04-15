@@ -11,12 +11,7 @@ class Shared::Navigation < BaseComponent
       end
       div class: "collapse navbar-collapse", id: "navbarText" do
         ul class: "navbar-nav me-auto mb-2 mb-lg-0" do
-          li class: "nav-item" do
-            link "Users",
-              to: Users::Index,
-              data_selected: current_page?(Users::Index),
-              class: "nav-link #{current_page?(Users::Index) ? "active" : ""}"
-          end
+          render_users_menu_link
         end
         span class: "navbar-text" do
           render_signed_in_user
@@ -32,6 +27,17 @@ class Shared::Navigation < BaseComponent
       text current_user.try(&.email) || "oo"
       text " - "
       link "Sign out", to: SignIns::Delete, flow_id: "sign-out-link"
+    end
+  end
+
+  private def render_users_menu_link
+    if current_user.try &.admin?
+      li class: "nav-item" do
+        link "Users", flow_id: "users-menu-link",
+          to: Users::Index,
+          data_selected: current_page?(Users::Index),
+          class: "nav-link #{current_page?(Users::Index) ? "active" : ""}"
+      end
     end
   end
 end
