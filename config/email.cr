@@ -6,7 +6,7 @@ BaseEmail.configure do |settings|
     #
     # If you do need emails, get a key from SendGrid and set an ENV variable
     send_grid_key = send_grid_key_from_env
-    settings.adapter = Carbon::SendGridAdapter.new(api_key: send_grid_key)
+    settings.adapter = Carbon::SendGridAdapter.new(api_key: send_grid_key, sandbox: send_grid_sandbox_mode)
   elsif Lucky::Env.development?
     settings.adapter = Carbon::DevAdapter.new(print_emails: true)
   else
@@ -16,6 +16,10 @@ end
 
 private def send_grid_key_from_env
   ENV["SEND_GRID_KEY"]? || raise_missing_key_message
+end
+
+private def send_grid_sandbox_mode
+  ENV["SEND_GRID_SANDBOX_MODE"]? == "true" || true
 end
 
 private def raise_missing_key_message
