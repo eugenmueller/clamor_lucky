@@ -19,7 +19,7 @@ private def send_grid_key_from_env
 end
 
 private def send_grid_sandbox_mode
-  ENV["SEND_GRID_SANDBOX_MODE"]? || true
+  ENV["SEND_GRID_SANDBOX_MODE"]? == "true" || true
 end
 
 private def raise_missing_key_message
