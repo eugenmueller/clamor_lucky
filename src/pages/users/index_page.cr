@@ -15,7 +15,7 @@ class Users::IndexPage < MainLayout
   end
 
   private def render_user_list
-    ul class: "user-list" do
+    ul class: "user-list", flow_id: "user-list" do
       @users.each do |user|
         li do
           link user.id, to: Users::Show.with(user.id)
