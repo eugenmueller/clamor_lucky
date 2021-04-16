@@ -1,5 +1,4 @@
 module AuthenticationChecks
-
   def should_have_password_error
     el("body", text: "Password is wrong").should be_on_page
   end

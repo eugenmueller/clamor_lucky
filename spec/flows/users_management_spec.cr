@@ -39,7 +39,7 @@ describe "Administativ user management" do
       another_user = UserFactory.create
       flow = UserManagementFlow.new(user.email)
       flow.sign_in "password"
-      
+
       flow.visit_user(another_user)
       flow.should have_current_path(Me::Show)
     end

@@ -22,5 +22,5 @@ class UserManagementFlow < BaseFlow
 
   def visit_user(user)
     visit Users::Show.with(user.id)
-  end 
+  end
 end
