@@ -1,5 +1,5 @@
 class Users::Index < BrowserAction
-  include Authorization::RequireAdmin
+  before require_admin
 
   route do
     users = UserQuery.new
