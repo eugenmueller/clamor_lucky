@@ -1,4 +1,8 @@
+require "./mixins/authentication_checks"
+
 class AuthenticationFlow < BaseFlow
+  include AuthenticationChecks
+
   private getter email
 
   def initialize(@email : String)
@@ -24,29 +28,5 @@ class AuthenticationFlow < BaseFlow
       email: email,
       password: password
     sign_in_button.click
-  end
-
-  def should_be_signed_in
-    sign_out_link.should be_on_page
-  end
-
-  def should_have_password_error
-    el("body", text: "Password is wrong").should be_on_page
-  end
-
-  private def sign_in_link
-    el("@sign-in-link")
-  end
-
-  private def sign_out_link
-    el("@sign-out-link")
-  end
-
-  private def sign_out_button
-    el("@sign-out-button")
-  end
-
-  private def sign_in_button
-    el("@sign-in-button")
   end
 end

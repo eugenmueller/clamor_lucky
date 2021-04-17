@@ -9,6 +9,6 @@ abstract class BaseEmail < Carbon::Email
   end
 
   def default_from
-    Carbon::Address.new("clamorapp.info@gmail.com")
+    Carbon::Address.new("Clamor-App", "clamorapp.info@gmail.com")
   end
 end
